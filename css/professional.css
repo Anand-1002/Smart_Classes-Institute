@@ -402,21 +402,7 @@ img {
 
 @media (max-width: 768px) {
   .top-strip {
-    padding: 6px 0;
-    font-size: 0.72rem;
-  }
-  .top-strip-inner {
-    justify-content: center;
-  }
-  .top-strip-right {
-    display: none;
-  }
-  .top-strip-left {
-    white-space: normal;
-    text-align: center;
-    justify-content: center;
-    font-size: 0.72rem;
-    line-height: 1.35;
+    display: none !important;
   }
 }
 
