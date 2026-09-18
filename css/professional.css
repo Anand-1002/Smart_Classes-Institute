@@ -470,44 +470,70 @@ img {
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
   user-select: none;
   -webkit-user-select: none;
 }
 
-.top-strip-marquee-track {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  white-space: nowrap;
-  animation: topStripTickerScroll 26s linear infinite;
-  -webkit-animation: topStripTickerScroll 26s linear infinite;
-  will-change: transform;
+/* Safe edge fade masks that work on all mobile browsers and Android WebViews */
+.top-strip-marquee::before,
+.top-strip-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* Pause linear motion on user touch or hover so phone numbers and reviews can be tapped comfortably */
-.top-strip-marquee:hover .top-strip-marquee-track,
-.top-strip-marquee:active .top-strip-marquee-track {
-  animation-play-state: paused;
-  -webkit-animation-play-state: paused;
+.top-strip-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-surface) 0%, transparent 100%);
+}
+
+.top-strip-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-surface) 0%, transparent 100%);
+}
+
+.top-strip-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  min-width: 200% !important;
+  align-items: center;
+  white-space: nowrap;
+  animation: topStripTickerScroll 24s linear infinite !important;
+  -webkit-animation: topStripTickerScroll 24s linear infinite !important;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Pause linear motion ONLY on devices with a real mouse pointer (prevents mobile touch lock) */
+@media (hover: hover) and (pointer: fine) {
+  .top-strip-marquee:hover .top-strip-marquee-track {
+    animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
+  }
 }
 
 .top-strip-marquee-group {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
+  white-space: nowrap;
 }
 
 .top-strip-marquee-item {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 0 24px;
+  padding: 0 28px;
   font-size: 0.74rem;
   letter-spacing: 0.03em;
   color: var(--text-secondary);
   white-space: nowrap;
+  line-height: 1.5;
 }
 
 .top-strip-marquee-item .ticker-sep {
@@ -522,34 +548,40 @@ img {
   font-weight: 600;
 }
 
-/* 60fps GPU-Accelerated Right-to-Left Linear Motion */
+/* 60fps GPU-Accelerated Right-to-Left Continuous Linear Motion */
 @keyframes topStripTickerScroll {
   0% {
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
   100% {
     transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
   }
 }
 
 @-webkit-keyframes topStripTickerScroll {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
-/* On Mobile & Android devices (max-width: 768px):
+/* On Mobile, Android devices & Tablets (max-width: 992px):
    Do not remove strip; animate from right to left in linear motion, fit mobile screen width */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .top-strip {
     display: block !important;
-    padding: 7px 0;
+    padding: 8px 0;
+    min-height: 38px;
     overflow: hidden;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
   }
 
   .top-strip-inner,
@@ -559,17 +591,6 @@ img {
 
   .top-strip-marquee {
     display: flex !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .top-strip-marquee-track {
-    animation: none !important;
-    -webkit-animation: none !important;
-    transform: none !important;
-    -webkit-transform: none !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 }
 
