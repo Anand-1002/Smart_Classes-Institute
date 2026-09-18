@@ -367,7 +367,7 @@ img {
 }
 
 /* ==========================================================================
-   Minimalist Top Strip
+   Minimalist Top Strip & Mobile Linear Marquee Ticker
    ========================================================================== */
 .top-strip {
   background-color: var(--bg-surface);
@@ -377,33 +377,35 @@ img {
   color: var(--text-secondary);
   letter-spacing: 0.04em;
   width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1001;
+  box-sizing: border-box;
 }
 
 .top-strip .container {
   max-width: 1600px;
   width: 100%;
   padding: 0 clamp(12px, 2vw, 32px);
+  box-sizing: border-box;
 }
 
 .site-header .container {
   max-width: 100%;
   width: 100%;
   padding: 0 clamp(12px, 2.5vw, 48px);
+  box-sizing: border-box;
 }
 
-.top-strip-inner {
+.top-strip-inner,
+.top-strip-desktop {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 16px;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .top-strip {
-    display: none !important;
-  }
 }
 
 .top-strip-left {
@@ -422,6 +424,19 @@ img {
   background: var(--accent-brass);
   display: inline-block;
   flex-shrink: 0;
+  box-shadow: 0 0 6px var(--accent-brass);
+  animation: pulseDotGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseDotGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
 }
 
 .top-strip-right {
@@ -439,10 +454,123 @@ img {
   color: var(--text-primary);
   font-weight: 500;
   white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.top-strip-link:hover {
+.top-strip-link:hover,
+.top-strip-link:focus-visible {
   color: var(--accent-brass);
+}
+
+/* Mobile & Android Linear Marquee Ticker (Right to Left Continuous Motion) */
+.top-strip-marquee {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.top-strip-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  white-space: nowrap;
+  animation: topStripTickerScroll 26s linear infinite;
+  -webkit-animation: topStripTickerScroll 26s linear infinite;
+  will-change: transform;
+}
+
+/* Pause linear motion on user touch or hover so phone numbers and reviews can be tapped comfortably */
+.top-strip-marquee:hover .top-strip-marquee-track,
+.top-strip-marquee:active .top-strip-marquee-track {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.top-strip-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.top-strip-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.top-strip-marquee-item .ticker-sep {
+  color: var(--accent-brass);
+  opacity: 0.85;
+  font-size: 0.65rem;
+  padding: 0 2px;
+}
+
+.top-strip-marquee-item .ticker-rating {
+  color: var(--accent-brass);
+  font-weight: 600;
+}
+
+/* 60fps GPU-Accelerated Right-to-Left Linear Motion */
+@keyframes topStripTickerScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@-webkit-keyframes topStripTickerScroll {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* On Mobile & Android devices (max-width: 768px):
+   Do not remove strip; animate from right to left in linear motion, fit mobile screen width */
+@media (max-width: 768px) {
+  .top-strip {
+    display: block !important;
+    padding: 7px 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-strip-inner,
+  .top-strip-desktop {
+    display: none !important;
+  }
+
+  .top-strip-marquee {
+    display: flex !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-strip-marquee-track {
+    animation: none !important;
+    -webkit-animation: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* ==========================================================================

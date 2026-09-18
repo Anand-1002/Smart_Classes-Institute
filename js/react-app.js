@@ -338,16 +338,60 @@
     ];
 
     return h('div', { className: 'app-shell' },
-      // Top Strip
-      h('div', { className: 'top-strip' },
-        h('div', { className: 'container top-strip-inner' },
+      // Top Strip (Desktop Flex + Mobile Continuous Right-to-Left Linear Marquee)
+      h('div', { className: 'top-strip', 'aria-label': 'Announcements and Quick Contact' },
+        // Desktop Static Strip
+        h('div', { className: 'container top-strip-inner top-strip-desktop' },
           h('div', { className: 'top-strip-left' },
             h('span', { className: 'pulse-dot' }),
             h('span', null, 'New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.')
           ),
           h('div', { className: 'top-strip-right' },
             h('a', { href: 'tel:+917890102966', className: 'top-strip-link' }, '📞 +91 78901 02966'),
-            h('span', { style: { color: 'var(--accent-brass)' } }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+            h('span', { style: { color: 'var(--accent-brass)', fontWeight: '600' } }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+          )
+        ),
+        // Mobile / Android Linear Marquee Ticker (Right to Left Motion)
+        h('div', { className: 'top-strip-marquee', role: 'region', 'aria-label': 'Announcements Ticker' },
+          h('div', { className: 'top-strip-marquee-track' },
+            // Group 1
+            h('div', { className: 'top-strip-marquee-group' },
+              h('div', { className: 'top-strip-marquee-item' },
+                h('span', { className: 'pulse-dot' }),
+                h('span', null, 'New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('a', { href: 'tel:+917890102966', className: 'top-strip-link' }, '📞 +91 78901 02966'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('span', { className: 'ticker-rating' }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+              ),
+              h('div', { className: 'top-strip-marquee-item' },
+                h('span', { className: 'pulse-dot' }),
+                h('span', null, 'Executive Spoken English & Personality Mentorship in Sonarpur'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('a', { href: 'tel:+917890102966', className: 'top-strip-link' }, '📞 +91 78901 02966'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('span', { className: 'ticker-rating' }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+              )
+            ),
+            // Group 2 (Exact replica for 100% seamless, continuous loop)
+            h('div', { className: 'top-strip-marquee-group', 'aria-hidden': 'true' },
+              h('div', { className: 'top-strip-marquee-item' },
+                h('span', { className: 'pulse-dot' }),
+                h('span', null, 'New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('a', { href: 'tel:+917890102966', className: 'top-strip-link' }, '📞 +91 78901 02966'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('span', { className: 'ticker-rating' }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+              ),
+              h('div', { className: 'top-strip-marquee-item' },
+                h('span', { className: 'pulse-dot' }),
+                h('span', null, 'Executive Spoken English & Personality Mentorship in Sonarpur'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('a', { href: 'tel:+917890102966', className: 'top-strip-link' }, '📞 +91 78901 02966'),
+                h('span', { className: 'ticker-sep' }, '✦'),
+                h('span', { className: 'ticker-rating' }, '★ 4.9 / 5.0 (79+ Google Reviews)')
+              )
+            )
           )
         )
       ),

@@ -23,19 +23,63 @@ export default function Header({ currentView, setCurrentView, theme, toggleTheme
 
   return (
     <>
-      {/* Top Notification Strip */}
-      <div className="top-strip">
-        <div className="container top-strip-inner">
+      {/* Top Notification Strip (Desktop Flex + Mobile Continuous Right-to-Left Linear Marquee) */}
+      <div className="top-strip" aria-label="Announcements and Quick Contact">
+        {/* Desktop Static Strip */}
+        <div className="container top-strip-inner top-strip-desktop">
           <div className="top-strip-left">
             <span className="pulse-dot"></span>
-            <span><strong>New Batches Open:</strong> Limited 8-10 candidates per batch with Coach Sourav Chatterjee.</span>
+            <span>New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.</span>
           </div>
           <div className="top-strip-right">
             <a href="tel:+917890102966" className="top-strip-link">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               +91 78901 02966
             </a>
-            <span>⭐ 4.9 / 5.0 (79+ Reviews)</span>
+            <span style={{ color: 'var(--accent-brass)', fontWeight: 600 }}>★ 4.9 / 5.0 (79+ Google Reviews)</span>
+          </div>
+        </div>
+        {/* Mobile / Android Linear Marquee Ticker (Right to Left Motion) */}
+        <div className="top-strip-marquee" role="region" aria-label="Announcements Ticker">
+          <div className="top-strip-marquee-track">
+            {/* Group 1 */}
+            <div className="top-strip-marquee-group">
+              <div className="top-strip-marquee-item">
+                <span className="pulse-dot"></span>
+                <span>New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.</span>
+                <span className="ticker-sep">✦</span>
+                <a href="tel:+917890102966" className="top-strip-link">📞 +91 78901 02966</a>
+                <span className="ticker-sep">✦</span>
+                <span className="ticker-rating">★ 4.9 / 5.0 (79+ Google Reviews)</span>
+              </div>
+              <div className="top-strip-marquee-item">
+                <span className="pulse-dot"></span>
+                <span>Executive Spoken English & Personality Mentorship in Sonarpur</span>
+                <span className="ticker-sep">✦</span>
+                <a href="tel:+917890102966" className="top-strip-link">📞 +91 78901 02966</a>
+                <span className="ticker-sep">✦</span>
+                <span className="ticker-rating">★ 4.9 / 5.0 (79+ Google Reviews)</span>
+              </div>
+            </div>
+            {/* Group 2 (Exact replica for 100% seamless, continuous loop) */}
+            <div className="top-strip-marquee-group" aria-hidden="true">
+              <div className="top-strip-marquee-item">
+                <span className="pulse-dot"></span>
+                <span>New Batches Opening: Strictly 8–10 candidates per cohort with Coach Sourav Chatterjee.</span>
+                <span className="ticker-sep">✦</span>
+                <a href="tel:+917890102966" className="top-strip-link">📞 +91 78901 02966</a>
+                <span className="ticker-sep">✦</span>
+                <span className="ticker-rating">★ 4.9 / 5.0 (79+ Google Reviews)</span>
+              </div>
+              <div className="top-strip-marquee-item">
+                <span className="pulse-dot"></span>
+                <span>Executive Spoken English & Personality Mentorship in Sonarpur</span>
+                <span className="ticker-sep">✦</span>
+                <a href="tel:+917890102966" className="top-strip-link">📞 +91 78901 02966</a>
+                <span className="ticker-sep">✦</span>
+                <span className="ticker-rating">★ 4.9 / 5.0 (79+ Google Reviews)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
