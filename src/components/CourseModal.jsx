@@ -35,7 +35,7 @@ export default function CourseModal({ course, onClose, onBookDemo }) {
           </p>
         </div>
 
-        <div style={{ marginTop: '24px', display: 'flex', gap: '12px' }}>
+        <div className="modal-actions">
           <button
             className="btn btn-primary w-full"
             onClick={() => {

@@ -715,7 +715,7 @@
                       title: branch.title
                     })
                   ),
-                  h('div', { style: { display: 'flex', gap: '12px', marginTop: '12px' } },
+                  h('div', { className: 'campus-card-actions' },
                     h('a', {
                       href: branch.directionsUrl,
                       target: '_blank',
@@ -964,7 +964,7 @@
             h('strong', { style: { fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '6px' } }, 'Expected Outcome:'),
             h('p', { style: { fontSize: '0.88rem', color: 'var(--text-secondary)', fontStyle: 'italic' } }, selectedCourseModal.outcomes)
           ),
-          h('div', { style: { marginTop: '24px', display: 'flex', gap: '12px' } },
+          h('div', { className: 'modal-actions' },
             h('button', {
               className: 'btn btn-primary w-full',
               onClick: () => selectCourseAndBook(selectedCourseModal.title)

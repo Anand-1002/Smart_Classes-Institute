@@ -45,7 +45,7 @@ export default function BranchesSection({ onBookDemoForBranch }) {
                 />
               </div>
 
-              <div style={{ display: 'flex', gap: '12px', marginTop: '12px' }}>
+              <div className="campus-card-actions">
                 <a
                   href={branch.directionsUrl}
                   target="_blank"
