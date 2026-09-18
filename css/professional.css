@@ -502,8 +502,8 @@ img {
   min-width: 200% !important;
   align-items: center;
   white-space: nowrap;
-  animation: topStripTickerScroll 24s linear infinite !important;
-  -webkit-animation: topStripTickerScroll 24s linear infinite !important;
+  animation: topStripTickerScroll 12s linear infinite !important;
+  -webkit-animation: topStripTickerScroll 12s linear infinite !important;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
