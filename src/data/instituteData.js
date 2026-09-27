@@ -234,7 +234,7 @@ export const BRANCHES_DATA = [
     hours: "Monday – Sunday: 8:00 AM – 9:00 PM",
     phone: "+91 78901 02966",
     transit: "Located right at the bustling Power House crossing with frequent auto services from Garia, Rajpur, and Sonarpur Station.",
-    features: ["Interactive Discussion Lounge", "MNC Interview Simulation Room", "Acoustic Speech Booth", "Air Conditioned"],
+    features: ["Weekend Executive Batches", "Discussion Tables"],
     mapUrl: "https://maps.google.com/maps?q=Sonarpur%20Power%20House%20ICICI%20Bank%20Kolkata%20700150&t=&z=15&ie=UTF8&iwloc=&output=embed",
     directionsUrl: "https://maps.google.com/?q=Sonarpur+Power+House+ICICI+Bank+Kolkata+700150"
   }

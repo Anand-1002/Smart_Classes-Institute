@@ -218,7 +218,7 @@
       hours: "Mon – Sun : 8:00 AM – 9:00 PM",
       phone: "+91 78901 02966",
       transit: "Located right at Power House More, easily reachable from Sonarpur Station.",
-      features: ["Weekend Executive Batches", "Discussion Tables", "Corporate Interview Rooms"],
+      features: ["Weekend Executive Batches", "Discussion Tables"],
       mapUrl: "https://maps.google.com/maps?q=Sonarpur%20Power%20House%20More%20ICICI%20Bank&t=&z=15&ie=UTF8&iwloc=&output=embed",
       directionsUrl: "https://maps.google.com/?q=Sonarpur+Power+House+More+ICICI+Bank"
     }
