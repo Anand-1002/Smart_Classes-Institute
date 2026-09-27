@@ -113,8 +113,8 @@ export const COURSES_DATA = [
     badgeType: "purple",
     duration: "Integrated Program",
     icon: "sparkles",
-    shortDesc: "Holistic self-awareness, stress management, inner clarity, emotional balance, and spiritual growth guided by Mr. Sourav Chatterjee.",
-    overview: "Holistic self-awareness, stress management, inner clarity, emotional balance, and spiritual growth guided by Mr. Sourav Chatterjee.",
+    shortDesc: "Holistic self-awareness, stress management, meditation, inner clarity, emotional balance, and spiritual growth guided by Mr. Sourav Chatterjee.",
+    overview: "Holistic self-awareness, stress management, meditation, inner clarity, emotional balance, and spiritual growth guided by Mr. Sourav Chatterjee.",
     modules: [
       "Inner Clarity, Life Direction & Mindset Transformation",
       "Stress Management & Ancient Mindfulness Breathwork Techniques",
