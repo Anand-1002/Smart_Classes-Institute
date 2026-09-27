@@ -23,7 +23,7 @@ export default function CoursesSection({ onOpenSyllabus, onBookDemoForCourse }) 
           <span className="section-badge">Curated Curriculum</span>
           <h2 className="section-title">Offerings</h2>
           <p className="section-subtitle">
-            Eight specialized training disciplines designed for students, corporate executives, and personal leaders.
+            Specialized training disciplines designed for students, corporate executives, and personal leaders.
           </p>
         </div>
 

@@ -117,7 +117,7 @@ export default function App() {
           <>
             <div className="section-header text-center" style={{ padding: '60px 24px 0 24px' }}>
               <div className="section-badge">CURRICULUM CATALOG</div>
-              <h1 className="section-title">Explore All 8 Specialized Programs</h1>
+              <h1 className="section-title">Explore All Specialized Programs</h1>
             </div>
             <CoursesSection
               onOpenSyllabus={(course) => setActiveCourseModal(course)}

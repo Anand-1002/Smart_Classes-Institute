@@ -36,8 +36,9 @@ Designed with a modern **"Executive Quiet Luxury"** visual language, this web ap
 | **Public Speaking Skills** | Stage Fear Elimination | 2 Months | Podium drills, extempore talks, speech structure & presence |
 | **Effective Communication** | Spoken Fluency | 3 Months | Eliminating native thought lag, accent polish & conversations |
 | **Confidence Building** | Mindset Conditioning | 2 Months | Overcoming social anxiety, imposter syndrome & hesitation |
-| **Leadership & Life Coaching**| Executive Gravitas | 3 Months | Negotiation, boardroom poise, goal setting & team inspiration |
 | **Spiritual Guidance** | Inner Clarity & EQ | Integrated | Mindfulness, breathwork, stress release & mental focus |
+| **1-to-1 Life Counselling** | Emotional Clarity | Custom / 1-on-1 | Private guidance, stress release, relationship & life direction |
+| **Leadership & Life Coaching**| Executive Gravitas | 3 Months | Negotiation, boardroom poise, goal setting & team inspiration |
 | **Shadow Healing** | Subconscious Healing | 2 Months | Healing fear of judgment, childhood blocks & self-doubt |
 | **Numerology & Name Correction**| Destiny Alignment | 1.5–2 Months| Vibrational name analysis, brand optimization & auspicious cycles|
 

@@ -119,6 +119,25 @@
       outcomes: "Cultivates profound inner tranquility, laser mental focus, and grounded presence that enhances both communication and everyday well-being."
     },
     {
+      id: "life-counselling",
+      title: "1-to-1 Life Counselling",
+      category: "holistic",
+      badge: "Confidential 1-on-1",
+      duration: "Custom / 1-on-1",
+      shortDesc: "Private, confidential one-on-one life counselling to overcome emotional roadblocks, chronic stress, relationship complexities, and life transitions with Coach Sourav Chatterjee.",
+      overview: "Private, confidential 1-on-1 life guidance and personal counselling sessions with Mr. Sourav Chatterjee. Tailored to help you resolve deep emotional conflicts, overcome career roadblocks, dissolve chronic anxiety, and rediscover your inner strength and life direction.",
+      modules: [
+        "Confidential 1-on-1 Personal Intake & Deep Empathetic Listening",
+        "Identifying Root Emotional Triggers, Anxiety & Inner Blockages",
+        "Clarity & Purpose Coaching for Career & Life Transitions",
+        "Relationship Dynamics, Interpersonal Conflict & Healthy Boundaries",
+        "Ancient Mindfulness Breathwork & Somatic Stress Release Protocols",
+        "Subconscious Mindset Conditioning & Overcoming Self-Doubt",
+        "Personalized Daily Action Plan & Continuous Mentorship Support"
+      ],
+      outcomes: "Attain profound emotional balance, mental peace, decisive clarity, and renewed purpose to navigate life’s complex challenges with unshakable inner confidence."
+    },
+    {
       id: "leadership-coaching",
       title: "Leadership & Life Coaching",
       category: "personality",
@@ -186,7 +205,7 @@
       hours: "Mon – Sun : 8:00 AM – 9:00 PM",
       phone: "+91 78901 02966",
       transit: "5 mins by Toto/Auto from Sonarpur Station toward Vidyapith School.",
-      features: ["Podium Stage", "HD Video Speech Feedback", "Micro-Batch Rooms", "Air Conditioned"],
+      features: ["Podium Stage", "Micro-Batch Rooms"],
       mapUrl: "https://maps.google.com/maps?q=Smart%20Classes%20Vivekananda%20Road%20Sonarpur%20700149&t=&z=15&ie=UTF8&iwloc=&output=embed",
       directionsUrl: "https://maps.google.com/?q=Smart+Classes+Vivekananda+Road+Sonarpur+700149"
     },
@@ -646,7 +665,7 @@
               h('span', { className: 'section-badge' }, 'Curated Curriculum'),
               h('h2', { className: 'section-title' }, 'Offerings'),
               h('p', { className: 'section-subtitle' },
-                'Eight specialized training disciplines designed for students, executives, and spiritual seekers.'
+                'Specialized training disciplines designed for students, executives, and personal seekers.'
               )
             ),
 
