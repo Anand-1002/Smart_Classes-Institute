@@ -17,8 +17,49 @@ export const INSTITUTE_INFO = {
   reviewsCount: "79+",
   studentsTrained: "1,000+",
   successRate: "95%",
-  operatingHours: "Monday – Sunday: 8:00 AM – 9:00 PM"
+  operatingHours: "Monday – Sunday: 8:00 AM – 9:00 PM",
+  socials: {
+    facebook: "https://www.facebook.com/share/19i96sWTny/",
+    instagram: "https://www.instagram.com/divineaura_666",
+    youtube: "https://youtube.com/@divineaura555?si=fgGVHvAtDU1KqrZT",
+    linkedin: "https://www.linkedin.com/in/sourav-chatterjee-43bb9790"
+  }
 };
+
+export const SOCIAL_PROFILES = [
+  {
+    id: "facebook",
+    name: "Facebook",
+    handle: "Smart Classes",
+    url: "https://www.facebook.com/share/19i96sWTny/",
+    colorClass: "facebook",
+    ariaLabel: "Follow Smart Classes on Facebook"
+  },
+  {
+    id: "instagram",
+    name: "Instagram",
+    handle: "@divineaura_666",
+    url: "https://www.instagram.com/divineaura_666",
+    colorClass: "instagram",
+    ariaLabel: "Follow Divine Aura by Coach Sourav on Instagram"
+  },
+  {
+    id: "youtube",
+    name: "YouTube",
+    handle: "@divineaura555",
+    url: "https://youtube.com/@divineaura555?si=fgGVHvAtDU1KqrZT",
+    colorClass: "youtube",
+    ariaLabel: "Subscribe to Divine Aura on YouTube"
+  },
+  {
+    id: "linkedin",
+    name: "LinkedIn",
+    handle: "Sourav Chatterjee",
+    url: "https://www.linkedin.com/in/sourav-chatterjee-43bb9790",
+    colorClass: "linkedin",
+    ariaLabel: "Connect with Sourav Chatterjee on LinkedIn"
+  }
+];
 
 export const COURSES_DATA = [
   {
